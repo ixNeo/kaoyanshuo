@@ -1,0 +1,21 @@
+<!--pages/mine/feedback/feedback.wxml-->
+<form bindsubmit="formSubmit">
+  <view class="white"></view> 
+  <view class="title">描述你遇到的问题</view>
+  <view class="white"></view>
+  <view class="textareatype">
+    <textarea class="textarea-bg" placeholder="请输入内容"></textarea>
+  </view>
+  
+  <view class="white"></view>
+  
+
+
+  <view class="white"></view>
+  <view class="line"></view>
+  <view class="white"></view>
+
+    <button class="buttontype" plain="true" form-type="submit">提交</button>
+  
+
+</form>

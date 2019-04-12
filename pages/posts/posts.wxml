@@ -1,0 +1,92 @@
+<!--question.wxml-->
+<view class="touch" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" >
+<!--切换页面-->
+<view class="container">
+    <view class="question-wrp">
+        <view class="question-item">
+            <view class="que-tag" wx:for="{{item.post_tags}}" wx:for-index="idx" wx:for-item="item_tag">
+                <text class="tag">{{item_tag}}</text>
+            </view>
+            <view class="que-title">
+                {{item.post_brief}}
+            </view>
+
+            <view class="que-title">
+                \n{{item.post_content}}
+            </view>
+
+            <view class="que-follow">
+                <view class="left">
+                    <view class="watch">
+                        <image src="../../images/eye.png"></image>
+                        <text>{{item.like_count}}</text>
+                    </view>
+                    <view class="comment">
+                        <image src="../../images/comment2.png"></image>
+                        <text>{{item.follow_count}}</text>
+                    </view>
+                </view>
+                <view class="right" bindtap="add_like">
+                    关注
+                </view>
+            </view>
+        </view>
+        <view class="que-operate flex-wrp">
+        <!--<view class="invite flex-item">
+                <image src="../../images/invite.png"></image>
+                <text>邀请回答</text>
+            </view>-->
+
+            <view class="write flex-item" bindtap="add_follow">
+                <image src="../../images/write.png"></image>
+                <text>跟帖</text>
+            </view>
+        </view>
+    </view>
+    <!---一个盒子--->
+    <view class="answer-feed" wx:for="{{item.follow_posts}}" wx:for-index="idx" wx:for-item="follow_post">
+        <view  bindtap="bindItemTap" class="feed-item">
+
+            <!--这是跟帖的人用户名、头像盒子-->
+            <view class="feed-source">
+                <a class="" bindTap="">
+                    <view class="avatar">
+                        <image src="../../images/icon1.jpeg"></image>
+                    </view>
+                    <text>{{follow_post.user_name}}</text>
+                </a>
+            </view>
+            <!--这是跟帖内容-->
+            <view class="feed-content">
+                <view class="answer-body">
+                    <view>
+                        <text class="answer-txt">{{follow_post.follow_content}}</text>
+                    </view>
+                    <view class="answer-actions">
+                        <view class="like dot">
+                            <a>3.9K 赞同 </a>
+                        </view>
+                        <!--
+                        <view class="comments">
+                            <a>254 评论 </a>
+                        </view>
+                        <view class="time">
+                            <a>2 个月前</a>
+                        </view>-->
+                    </view>
+                </view>
+            </view>
+        </view>
+
+    </view>
+    <!----一个盒子の结束--->
+    
+
+
+
+
+
+</view>
+
+
+</view>

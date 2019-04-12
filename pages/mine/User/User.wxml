@@ -1,0 +1,54 @@
+<form bindsubmit="formSubmit">
+
+
+  <view class="boder">
+    <view class="input">
+      <view class="nameLabel">昵称</view>
+      <view class="valueLabel">
+      <input name="name" placeholder="请输入昵称" value=''/>
+      </view>
+    </view>
+
+    <view class="line"></view>
+
+    <view class="input">
+      <view class="nameLabel">性别</view>
+      <view class="valueLabel">
+        <input name="name" placeholder="请输入性别" value=''/>
+      </view>
+    </view>
+
+    <view class="line"></view>
+
+
+    <view class="input">
+      <view class="nameLabel">年龄</view>
+      <view class="valueLabel">
+         <input name="age" placeholder="请输入年龄" value=''/>
+      </view>
+    </view>
+
+    <view class="line"></view>
+
+
+    <view class="input">
+      <view class="nameLabel">头像</view>
+      <view class="photoLabel">0/1</view>
+    </view>
+
+    <view>
+     <button class="photo" bindtap="uploadPhoto">
+       <image src="" style=""></image>
+      </button>
+    </view>
+  
+    <view class="white"></view>
+    <view class="line"></view>
+    <view class="white"></view>
+          
+  
+      <button class="buttontype" plain="true" form-type="submit">确定</button>
+  
+    <view class="white"></view>
+  </view>
+</form>

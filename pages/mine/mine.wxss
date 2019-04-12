@@ -1,0 +1,90 @@
+/* pages/mine/mine.wxss */
+.content{
+  font-family:"DLUT"
+}
+.items{
+  background-color: rgb(255, 255, 255);
+  height: 1100rpx;
+}
+.account{
+  display: flex;
+  flex-direction: row;
+  padding-top: 40rpx;
+  height: 220rpx;
+}
+.item{
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  align-items: center;
+  height: 120rpx;
+}
+.bg{
+  background: rgb(255, 255, 255);
+}
+.login{
+  margin-left: 3%;
+  margin-right: 10%;
+  margin-top: 17%;
+}
+.nav{
+  background-color: #ffffff;
+  height: 100rpx;
+  display: flex;
+   flex-direction: row;
+  text-align: center;
+  align-items: center;
+}
+.navName{
+  font-size: 24rpx;
+  width: 50%;
+}
+.hr{
+  width: 100%;
+  height: 10px;
+  background-color: #f0f0f0;
+}
+.img{ 
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.imgp{
+  margin-left: 2%;
+}
+.name{
+  padding-top: 30rpx;
+  padding-left: 20rpx;
+  padding-bottom: 30rpx;
+  font-size: 26rpx;
+}
+.detail{
+  font-size: 30rpx;
+  position: absolute;
+  right: 20rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #882222;
+}
+.line{
+  border: 2rpx solid #f0f0f0;
+  opacity: 0.3;
+  background-color: #f0f0f0;
+}
+.buttontype{
+  background-color: #ffffff;
+  margin-top: 40rpx;
+  font-size: 38rpx;
+  color: #b8b8b8;
+
+  height:220rpx;
+  width: 100%;
+  line-height: 30rpx;
+  display: table;
+}
+button::after{
+  border: none;
+}
+.buttontype text {
+  vertical-align:middle;
+  display: table-cell;
+}

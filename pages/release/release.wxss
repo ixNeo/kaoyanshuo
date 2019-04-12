@@ -1,0 +1,109 @@
+.content{
+  background-color: #ffffff;
+}
+.head{
+  background-color: rgb(255, 255, 255);
+  height: 5%;
+  display: flex;
+  flex-direction: row;
+}
+.head_text{
+  text-align: center;
+  font-size: 18px;
+  color: #817f7f;
+  width:50%;
+  line-height:40px;
+  flex:1;
+  position:relative ; 
+}
+.line{
+  height: 10rpx;
+  background: rgb(200, 201, 199);
+}
+.line_sha{
+  height: 3px;
+  background: rgb(156, 154, 154);
+}
+.input{
+  display: flex;
+  flex-direction: column;
+}
+.input_title_border{
+  width: 90%;
+  height: 70rpx;
+  margin: 2% 5% 0% 5%;
+  border: solid 1px #dddddd;
+}
+.input_title{
+  flex:1;
+  height: 70rpx;
+  width: 90%;
+  text-align: center;
+}
+.title_line{
+  margin: 0 5% 0 6%;
+  height: 2px;
+  background-color: rgb(179, 181, 182);
+}
+.input_text{
+  flex: 2;
+  width: 96%;
+  height: 200px;
+  margin: 5% 1% 0 1%;
+}
+.tag{
+  padding-top: 1%;
+  font-size: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.tag_1{
+  margin-left: 3%;
+  float: left;
+  flex:1;
+  position:relative ;
+}
+.tag_button::after{
+  border: none;
+}
+.count1{
+  flex:3;
+  color: rgb(104, 182, 102);
+  float: right;
+  margin-right: 5%;
+  font-size: 14px;
+}
+.count2{
+  flex:3;
+  color: red;
+  float: right;
+  margin-right: 5%;
+  font-size: 14px;
+}
+.end{
+  display: flex;
+  flex-direction: column;
+}
+.add_img_view{
+  margin-top: 2%;
+  margin-right: 55%;
+  float: left;
+}
+.add_img::after{
+  border: none;
+  width: 130px;
+  height: 130px;
+}
+.add_img image{
+  height: 130px;
+  width: 130px;
+}
+.send{
+  font-size: 20px;
+  width: 50%;
+  margin-left: 25%; 
+  margin-top: 3%;
+}
+.send_button::after{
+  border: none;
+}

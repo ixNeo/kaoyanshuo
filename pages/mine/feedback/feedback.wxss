@@ -1,0 +1,32 @@
+/* pages/mine/feedback/feedback.wxss */
+.white{
+  height: 20px;
+  color: #ffffff;
+}
+.line{
+  border: 1px solid #cccccc;
+  opacity: 0.2;
+}
+.title{
+  font-size: 17px;
+}
+.textareatype{
+  width: 86%;
+  height: 180rpx;
+  margin-left: 7%;
+  background-color: #ffffff;
+  border: 1px solid #d6d6d6a8; 
+  border-radius: 2px; 
+}
+textarea{
+
+}
+.textarea-bg {
+  padding: 10rpx;
+  font-size: 32rpx;
+}
+.buttontype{
+  width: 70px;
+  font-size: 15px;
+}
+

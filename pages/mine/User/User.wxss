@@ -1,0 +1,50 @@
+/* pages/mine/User/User.wxss */
+.white{
+  height: 25px;
+  color: #ffffff;
+}
+.input{
+  display: flex;
+  flex-flow: row;
+  height: 50px;
+
+}
+.nameLabel{
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  margin-left: 60px;
+  line-height: 47px;
+}
+.valueLabel{
+  font-size: 15px;
+  color: rgb(0, 0, 0); 
+  margin-top: 10px;
+  margin-left: 20%;
+
+}
+.photoLabel{
+  color: #5250508f;
+  font-size: 15px;
+  justify-content: flex-end;
+  margin-left: 50%;
+  margin-top: 3%;
+}
+.photo{
+  width: 100px;
+  height: 100px;
+}
+.buttontype{
+  width: 70px;
+  font-size: 15px;
+}
+
+.line{
+  border: 1px solid #cccccc;
+  opacity: 0.2;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.boder{
+
+
+}

@@ -1,0 +1,28 @@
+@font-face {font-family: "iconfont";
+  src: url('//at.alicdn.com/t/font_1128503_svt4h605ukn.eot?t=1554639144884'); /* IE9 */
+  src: url('//at.alicdn.com/t/font_1128503_svt4h605ukn.eot?t=1554639144884#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAALYAAsAAAAABqAAAAKKAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcAqBJIEzATYCJAMICwYABCAFhG0HNhvfBcg+QDZkA7VOJETaWb3z/ezQkdvXVjatBwNugXj4//2+7XPfGdUkokkMaGbJJFHCEMVKFA2N1WF1Inl+CW//1zRFEqp5viyrCFUH9jD/gHMZPT+np9Ts3Cbc9GTh7c20qukS/yYdUMByYUc1OT7q3eBkUBvonYY6kH/YgAssAQ1w8XvgC/DfxeG0CRTIfJBymXtQF8Xx1oD2xiiyIom8Yewmggf4mEC7MSOFC4fbI9QlsCoQLzzHgHrBKaUTaRWaGw6m+KhJa3lV/gIf+PejYRF1iqYKyLn2fG/DqhEwhtM6dymCi2Acb0KFFSCJW43BK0rCwZW0U5ZNASk9jXhTLY6qEM5fB9I7wYjOfCYWZj9qegGpj24AFyfZyU4w8dHPSW/uYcSlcreAJT9/+bWj583n00/tz20al0mdVs2N2pvu/ANplE5qspjdcXYGnffLpOtcs2i8GwZdMNqHhb8DxwB11f9qKCB4n9K6VYJ/xbi9Lg0zg9azmYK/xhrYlDEHSMrlmYap2MglKGiPLWqAtd/fVOnQLepDa4HlQNFiFCqtZpCJXYEmHXagWasjaLfseLzDAFYS2YYlnxqEXl9QdPsNlV7fyMT+QpNh/9CsN0rQ7k7khR3mwms2kyFko/mBnpXECmmkKTLv5LyEBuc5HP9MnHsenE9m5ciRYuIltuSvzkJEoeIkwoP2HIVhgiknPlkycUXS5XSqmt40sZIIms5jxCCIDZk+II8lEVO0s2hWPn9HHC9CBu5oGFE/IyznjY/mJmYDkEdhPKjhUV7JvXIsCKEghSUi6KDNI6FQAqXN83zEIibcCf7U0hS2UkOFk+3F0d/tgnZAVgIaKp1PHqOJZ8Q+VgAAAAA=') format('woff2'),
+  url('//at.alicdn.com/t/font_1128503_svt4h605ukn.woff?t=1554639144884') format('woff'),
+  url('//at.alicdn.com/t/font_1128503_svt4h605ukn.ttf?t=1554639144884') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('//at.alicdn.com/t/font_1128503_svt4h605ukn.svg?t=1554639144884#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 30px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iconicon_tianjia:before {
+    content: "\eb89";
+    float: right;
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 40px;
+    right: 20px;  
+    border: 0 solid #ffffff;
+    border-radius: 50px;
+    box-shadow: 3px 1px 1px #cccccc;
+}

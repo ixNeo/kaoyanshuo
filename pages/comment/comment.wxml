@@ -1,0 +1,42 @@
+<view class="top-tab flex-wrp flex-tab">
+  <view class="toptab flex-item {{currentNavtab==idx ? 'active' : ''}}" wx:for="{{navTab}}" wx:for-index="idx" wx:for-item="itemName" data-idx="{{idx}}" bindtap="switchTab"><!--页面头部开始--->
+    {{itemName}}<!--“跟帖”--这是页面头部的名字-->
+  </view><!--页面头部结束--->
+</view>
+<scroll-view scroll-y="true" class="container notify withtab" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}"><!--滚动列表开始--->
+  <view class="ctnt0" hidden="{{currentNavtab==0 ? '' : true}}">
+    <view class="notify-item flex-wrp"><!--第一个盒子开始-->
+      <view class="avatar flex-item">
+        <image src="../../images/icon1.jpeg"></image><!--加载用户头像-->
+      </view>
+      <view class="notify-content flex-item">
+        <text class="notify-source">这是用户名</text><!--加载用名字-->
+        <text class="notify-title">这是跟帖内容</text><!--跟帖内容-->
+      </view>
+    </view><!--第一个盒子结束-->
+    <view class="notify-item flex-wrp"><!--第二个盒子开始-->
+      <view class="avatar flex-item">
+        <image src="../../images/icon1.jpeg"></image>
+      </view>
+      <view class="notify-content flex-item">
+        <text class="notify-source">大哥</text>
+        <text class="notify-title">导力导力导力导力导力导力导力导力导力导力</text>
+      </view>
+    </view><!--第二个盒子开始--> 
+  </view>
+</scroll-view><!--滚动列表结束--->
+
+
+
+<form bindsubmit="submitForm" report-submit="true">
+  <view class="release"><!--回复框开始-->
+    <view  wx:if="{{reply}}" class="replyinfo1">
+      回复<text class="text">{{replyUserName}}</text>
+      <button class="cancel" bindtap="cancleReply">取消回复</button><!--此处修改连接到release页面-->
+    </view>
+    <view class="replyinfo2">
+      <textarea placeholder-class="input_null" fixed="true" maxlength="-1" show-confirm-bar="false" cursor-spacing="15" auto-height="true" placeholder="请输入回复" name="comment"></textarea><!--输入的文本框-->
+      <button form-type="submit" class="submit"><text>发送</text></button><!--回复按钮-->
+    </view>
+  </view><!--回复框结束--->
+</form>

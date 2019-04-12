@@ -1,0 +1,50 @@
+<!--index.wxml-->
+<!--头部-->
+<view calss="content">
+  <view class="head">
+    <!--中间文字-->
+    <view class="head_text">
+      发布一个新帖
+    </view>
+  </view>
+  <view class='line_sha'></view>
+  <view class='line'></view>
+  <!--添加标签-->
+    <view class="tag">
+      <view class="tag_1" bindtap='modalinput'><button class="tag_button" size='mini' style='background-color:#ffffff ;font-size: 15px; color:#817f7f'>添加标签▼</button></view>
+    </view>
+
+    <modal hidden="{{hiddenmodalput}}" title="请添加标签" confirm-text="提交" cancel-text="重置" bindcancel="cancel" bindconfirm="confirm">
+       <input type='text' placeholder="标签" value="{{clear_input}}" maxlength='8' bindinput='getTag1' auto-focus/> 
+       <input type='text' placeholder="标签" value="{{clear_input}}" maxlength='8' bindinput='getTag2' auto-focus/> 
+       <input type='text' placeholder="标签" value="{{clear_input}}" maxlength='8' bindinput='getTag3' auto-focus/> 
+</modal> 
+    <!--添加内容-->
+    <view class='input'>
+      <!--添加标题-->
+      <view class='input_title_border'>
+        <input class='input_title'  bindinput='getTitle' placeholder='请输入标题...' maxlength='15'></input>
+      </view>
+      <view class='title_line'></view><!--一条线-->
+      
+      <!--输入文本框-->
+      <textarea class='input_text' placeholder='请输入内容...'  bindinput="getTextarea" maxlength='200'></textarea>
+      <view>
+        <view  class="{{textarea.length<200?'count1':'count2'}}">{{textarea.length}}/200</view>
+      </view>
+    </view>
+    <view class="end">
+    <!--上传图片-->
+    <view class="add_img_view">
+     <button class="add_img" bindtap='uploadPhoto' style='background:#ffffff'>
+     <image class="image" src='../../images/add_img.png'></image>
+     </button></view>
+     <!--发送-->
+     <view class='line_sha'></view>
+         <view class='line'></view>
+    <view class="send">
+      <button class="send_button"  style=' background-color: rgb(104, 182, 102)' bindtap='insert_post'>
+     发送</button>
+    </view>
+    </view>
+</view>
