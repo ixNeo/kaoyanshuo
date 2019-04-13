@@ -111,20 +111,23 @@ Page({
         const province = userInfo.province
         const city = userInfo.city
         const country = userInfo.country;
+        delete posts_agreed._id;
         posts_agreed.owner = nickName;
+        console.log('post-agreed', posts_agreed);
+        db.collection('person').add({
+          // data 字段表示需新增的 JSON 数据
+          data: posts_agreed,
+          success: res => {
+            // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id
+            console.log(res);
+          },
+          fail(res) {
+            console.log(res);
+          }
+        });
       }
     });
-    db.collection('person').add({
-      // data 字段表示需新增的 JSON 数据
-      data: posts_agreed,
-      success: res => {
-        // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id
-        console.log(res);
-      },
-      fail(res) {
-        console.log(res);
-      }
-    });
+    
   },
 
   // 跟帖按钮事件

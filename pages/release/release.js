@@ -14,7 +14,8 @@ Page({
     // jktian-add
     type: '',
     major_item: {},
-    follow_item: {}
+    follow_item: {},
+    user_name: ''
   },
 
   onLoad: function (options) {
@@ -24,6 +25,16 @@ Page({
       let item_value = JSON.parse(options.item);
       this.setData({ major_item: item_value });
     }
+    var that = this;
+    //调用应用实例的方法获取全局数据
+    // this.getData();
+    wx.getUserInfo({
+      success(res) {
+        const userInfo = res.userInfo
+        const nickName = userInfo.nickName
+        that.setData({user_name: nickName});
+      }
+    });
   },
 
   //跳转到发送
@@ -145,7 +156,7 @@ Page({
   /* 点击发送按钮，上传数据*/
   insert_post: function (e) {
     var that = this;
-    var mname = "unknown";
+    var mname = that.data.user_name;
     const db = wx.cloud.database();
     var data_item = {
       // _id: 'todo-identifiant-aleatoire', // 可选自定义 _id，在此处场景下用数据库自动分配的就可以了
@@ -157,8 +168,6 @@ Page({
       like_count: 0,
       follow_count: 0,
       follow_posts: [
-        { "user_id": 1, "user_name": "wangZY", "user_head": "../../images/icon1.jpeg", "follow_content": "one" },
-        { "user_id": 2, "user_name": "wangZY", "user_head": "../../images/icon1.jpeg", "follow_content": "this is my follow content" }
       ]
     };
     var follow_item = {

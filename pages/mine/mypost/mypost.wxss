@@ -1,0 +1,33 @@
+/**index.wxss**/
+@import "../../../font.wxss";
+.container{
+  height: 1500rpx;
+}
+
+.container{
+  padding: 0;
+  font-size: 14rpx;
+  background: #F0F4F3;
+  color: #000;
+}
+
+.mylabel {
+    display: inline-block;
+    height: 35rpx;
+    line-height: 30rpx;
+    padding: 10 15rpx;
+    margin: 0 8rpx;
+    font-family: PingFangSC;
+    border-radius: 2px;
+    vertical-align: middle;
+    overflow: hidden;
+    background: rgb(215, 235, 196);
+    color: rgb(144, 148, 144);
+
+    
+  }
+.label_text{
+  
+  border: 2px;
+  font-size: 18rpx;
+}

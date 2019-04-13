@@ -37,7 +37,12 @@
 }
 .navName{
   font-size: 24rpx;
-  width: 50%;
+  margin-left: 15%;
+  display: flex;
+  flex-direction: row;
+}
+.navinput{
+  width: 450rpx;
 }
 .hr{
   width: 100%;
@@ -56,6 +61,15 @@
   padding-left: 20rpx;
   padding-bottom: 30rpx;
   font-size: 26rpx;
+
+}
+.name123{
+  width: 70%;
+  background-color: rgb(255, 255, 255);
+  color: #ffffff;
+}
+.name123::after{
+  border: none;
 }
 .detail{
   font-size: 30rpx;

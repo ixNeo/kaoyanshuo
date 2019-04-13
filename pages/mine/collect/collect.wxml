@@ -1,0 +1,44 @@
+<!--index.wxml-->
+<view class="touch" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" ><!--切换页面-->
+<scroll-view scroll-y="true" class="container" bindscrolltoupper="upper" upper-threshold="10" lower-threshold="5" bindscrolltolower="lower"  scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+
+
+<block wx:for="{{feed}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}"><!--发帖按钮集合-->   
+        <view class="feed-item" data-item-Value="{{item}}" bindtap="bindItemTap"><!--一个帖子item开始--->
+            <view class="feed-source"><!--用户基本信息版块开始-->
+                <a class="">
+                    <view class="avatar">                        
+                        <!-- <image src="{{item.user_head}}"></image>-获取------------用户头像 -->
+                        <image src="../../../images/icon1.jpeg"></image>
+                    </view>                    
+                    <text>{{item.user_name}}发了帖子</text><!--获取用户--名字-->
+                </a>
+                <!--更多按钮 隐去 <image class="item-more" mode="aspectFit" src="../../images/more.png"></image>-->
+            </view><!--用户基本信息版块结束-->
+          <view> <!--帖子标签开始-->
+          <label class="mylabel" wx:for="{{item.post_tags}}" wx:for-index="idx" wx:for-item="item_tag"><text class="label_text">{{item_tag}}</text> </label>
+          </view><!--帖子标签结束-->          
+            <view class="feed-content"><!-----帖子摘要版块开始------->              
+                <view class="answer-body">                    
+                    <view data-item-Value="{{item}}" bindtap="bindItemTap">                        
+                        <text class="answer-txt" >{{item.post_brief}}</text><!--帖子摘要加载-->
+                    </view>
+                    <view class="answer-actions" data-item-Value="{{item}}" bindtap="bindItemTap"><!--点赞、跟帖数量加载开始-->
+                        <view class="like dot">
+                            <a>{{item.like_count}} 赞 </a><!--加载点赞数--->
+                        </view>                        
+                        <view class="comments">
+                            <a>{{item.follow_count}} 跟帖 </a><!--加载跟帖数--->
+                        </view>
+                        <!--加载跟帖按钮，隐去                        
+                        <view class="follow-it">
+                            <a>关注问题</a>
+                        </view>
+                        --->
+                    </view><!--点赞、跟帖数量加载结束-->
+                </view>
+            </view><!--帖子摘要、点赞加载结束-->
+        </view>
+</block><!--发帖按钮集合--> 
+</scroll-view>
+</view>

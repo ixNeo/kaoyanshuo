@@ -24,26 +24,25 @@
 
   </view>
 
+      <view class='line'></view>
     <view class="nav">
-      <view class="navName" catchtap='goToUserCenter'>
-        <image src="../../images/write.png" style="width:50rpx;height:50rpx;">
-        </image>个人中心
-      </view>
-      <view class="navName" catchtap='goTobackCenter'>
-        <image src="../../images/comment2.png" style="width:50rpx;height:50rpx;">
-        </image>反馈中心
+      <view class="navName">
+      <view>
+       <image src="../../images/write.png" style="width:50rpx;height:50rpx;">
+        </image></view>
+        <view class="navinput"><input placeholder='点击添加个性签名' maxlength='15'></input></view>
       </view>
     </view>
 
     <view class="hr">
     </view>
 
-    <view class="item">
-      <view class="imgp">
+    <view class="item" bindtap='jumpto_collect'>
+      <view class="imgp" bindtap='jumpto_collect'>
         <image src="../../images/star.png" style="width:50rpx;height:50rpx;"></image>
       </view>
-      <view class="name">(我)收藏(的论坛)</view>
-      <view class="detail">
+      <view class="name" bindtap='jumpto_collect'>(我)收藏(的论坛)</view>
+      <view class="detail" bindtap='jumpto_collect'>
         <text>></text>
       </view>
     </view>
@@ -75,12 +74,12 @@
     <view class="hr">
     </view>
 
-    <view class="item">
-      <view class="imgp">
+    <view class="item"  bindtap='jumpto_mypost'>
+      <view class="imgp"  bindtap='jumpto_mypost'>
         <image src="../../images/draft.png" style="width:50rpx;height:50rpx;"></image>
       </view>
-      <view class="name">(我的)问答</view>
-      <view class="detail">
+      <view class="name" bindtap='jumpto_mypost'>(我的)问答</view>
+      <view class="detail" bindtap='jumpto_mypost'>
         <text>></text>
       </view>
     </view>

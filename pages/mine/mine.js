@@ -194,8 +194,18 @@ touchStart: function (e) {
   touchEnd: function (e) {
     clearInterval(interval); // 清除setInterval 
     time = 0;
-  }
+  },
 
+  jumpto_collect: function (e){
+    wx.navigateTo({
+      url: '../mine/collect/collect',
+    });
+  },
 
+  jumpto_mypost: function (e) {
+    wx.navigateTo({
+      url: '../mine/mypost/mypost',
+    });
+  },
 
 })
