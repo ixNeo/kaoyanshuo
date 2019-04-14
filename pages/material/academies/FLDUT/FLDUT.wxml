@@ -1,0 +1,44 @@
+<!--answerwaiguoyu.wxml-->
+<view class="container">
+    <view class="question" >
+        <text class="question-title">大连理工大学外国语学院</text>
+    </view>
+ 
+    <view class="answer-content">
+        <text>大连理工大学外国语学院始建于大连理工大学建校初期，前身为承担全校公共外语教学的俄文教研组；1985年成立外语系，建立英语专业，2001年建立日语专业，获得“外国语言学及应用语言学”二级学科硕士学位授予权；2003年，外语系改建为外国语学院，获英语语言文学二级学科硕士学位授予权；2010年获得外国语言文学一级学科硕士学位授予权，下设外国语言学及应用语言学、英语语言文学和日语语言文学3个二级学科硕士点；2010年获得翻译专业硕士学位（MTI）授予权；2012年建立翻译专业；2013年建立俄语专业。
+
+外国语学院下设英语系、日语系、俄语系、翻译系、研究生教研部、大学英语教研部等6个教学单位；典籍翻译研究所、欧美文学研究所、语言与认知研究所、日本学研究所、语用学研究中心、外语教育研究中心、亚太与全球战略研究中心等研究机构，另设中白国际文化交流中心、外语教育实践基地（外语实践中心）和外语考试中心。
+        </text>
+        <image src="../../../../images/waiguoyu1.jpg"></image>
+        <text>
+        外国语学院现拥有一支由国内外教师组成的高水平教学科研团队。现有教职工115人（教师107人），其中教授18人、副教授62人，讲师27人，另有国内外客座和兼职教授16人，30名外籍教师。现有本科生364人，研究生192人。近十年来，出版译著30余本、教材100余部，发表SSCI、EI、CSSCI检索文章150多篇，学院目前承担国家社科基金项目14项、教育部人文社科项目14项、全国教育科学规划外语教育专项项目3项。学院现已形成文学与哲学、语言与认知、语用语篇分析、典籍翻译、日本问题研究5个领域的研究优势。外国语学院目前同美国、英国、加拿大、澳大利亚和日本等国家的大学和研究机构保持着密切的学术联系，建立了一批联合研究项目，拓宽并加深了对外合作交流的广度与深度，使得学院的科研得以更好更直接地与国际前沿接轨。
+        </text>
+        <image src="../../../../images/waiguoyu2.jpg"></image>
+    </view>
+
+    <view class="answer-footer flex-wrp">
+        <view class="good flex-item">
+            <view class="good-bad">
+                <image src="../../../../images/awsl.png"></image>
+            </view>
+            <view class="good-num">2.1k</view>
+        </view>
+        <view class="operation-wrp flex-item">
+            <view class="operation flex-wrp flex-tab">
+                <button class="operation-btn flex-item" hover-class="operation-btn-hover" plain = 'true' >
+                    <image src="../../../../images/star.png"></image>
+                    <text>收藏</text>
+                </button>
+                <button class="operation-btn flex-item" plain = 'true'  bindtap='goToTalkPage'>
+                    <image src="../../../../images/comment.png"></image>
+                    <text>评论</text>
+                </button>
+
+            </view>
+        </view>
+
+
+
+    </view>
+</view>
+

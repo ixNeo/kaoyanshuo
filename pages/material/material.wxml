@@ -1,0 +1,87 @@
+<view class="touch" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" ><!--切换页面-->
+<scroll-view scroll-y="true" class="container" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  <view class="ctnt0" hidden="{{currentNavtab==0 ? '' : true}}">
+    <swiper class="activity" indicator-dots="{{indicatorDots}}"
+            autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="355" height="155"/>
+        </swiper-item>
+      </block>
+    </swiper>
+
+
+      <view class="feed-item">
+        <view class="feed-content">
+
+          <view class="question" qid="{{question_id}}" bindtap="bindQueTap1">
+            <a class="question-link">
+              <text>大连理工大学【软件学院】简介</text>
+            </a>
+          </view>
+          <view class="answer-body">
+            <view bindtap="bindItemTap">
+              <text class="answer-txt" aid="{{answer_id}}" bindtap="bindQueTap1">大连理工大学软件学院成立于2000年，是大连理工大学直属的学院之一，也是国家首批国家示范性软件学院之一。学院坐落在大连理工大学开发区校区，校园环境优美、功能齐全、设备先进、办学条件一流。
+
+学院具有全日制本科生、硕士研究生、博士研究生等培养层次，拥有软件工程一级学科博士点，建有辽宁省省级实验教学示范中心及辽宁省虚拟仿真实验教学示范中心。学院现有全日制本科生2500余人，硕士、博士研究生600余人，软件工程专业于2015年顺利通过全国工程教育专业认证（全国仅2所）。</text>
+            </view>
+          </view>
+
+        </view>
+      </view>
+<view class="feed-item">
+        <view class="feed-content">
+
+          <view class="question" qid="{{question_id}}" bindtap="bindQueTap2">
+            <a class="question-link">
+              <text>大连理工大学【计算机学院】简介</text>
+            </a>
+          </view>
+          <view class="answer-body">
+            <view bindtap="bindItemTap">
+              <text class="answer-txt" aid="{{answer_id}}" bindtap="bindQueTap2">大连理工大学计算机专业创建于1974年，并于1981年发展成计算机科学与工程系。2009年，成立计算机科学与技术学院。目前，大连理工大学计算机科学与技术学院拥有1个博士后流动站、2个博士点和3个硕士点，其中，计算机应用技术硕士点建于1986年，博士点建于2000年，2002年建成辽宁省重点学科；计算机软件与理论硕士点建于1992年，博士点建于2002年；计算机系统结构硕士点建于2002年。2008年大连理工大学计算机科学与技术建成辽宁省一级重点学科，2009年建成计算机科学与技术博士后流动站。学院由计算机技术研究所、计算机软件与理论研究所、计算机应用技术研究所、计算机系统结构研究所组成。
+篇，EI索引256篇, ISTP索引72篇。</text>
+            </view>
+          </view>
+
+        </view>
+      </view>
+  <view class="feed-item">
+        <view class="feed-content">
+
+          <view class="question" qid="{{question_id}}" bindtap="bindQueTap3">
+            <a class="question-link">
+              <text>大连理工大学【建设与工程学部】简介</text>
+            </a>
+          </view>
+          <view class="answer-body">
+            <view bindtap="bindItemTap">
+              <text class="answer-txt" aid="{{answer_id}}" bindtap="bindQueTap3">建设工程学部是由建校初期的土木工程系（1949-1955年）发展而来的，先后经历了水利工程系（1955-1985年）、土木工程系（1985-1996年，扩建）、土木建筑学院（1996-2002年）、土木水利学院（2002-2009年）。2009年9月组建为建设工程学部至今。
+  建设工程学部下设水利工程学院、土木工程学院、交通运输学院、建设管理系和深海工程研究中心。现有水利工程和土木工程2个一级学科博士点，13个二级学科博士点和17个硕士学科点，8个本科专业，2个博士后科研流动站；1个一级学科国家重点学科（水利工程），1个二级学科国家重点学科（结构工程），2个一级学科辽宁省重点学科（土木工程、水利工程）；1个国家重点实验室（海岸和近海工程国家重点实验室），1个国家地方联合工程实验室（桥梁与隧道技术国家地方联合工程实验室）。</text>
+            </view>
+          </view>
+
+        </view>
+      </view>
+<view class="feed-item">
+        <view class="feed-content">
+
+          <view class="question" qid="{{question_id}}" bindtap="bindQueTap4">
+            <a class="question-link">
+              <text>大连理工大学【外国语学院】简介</text>
+            </a>
+          </view>
+          <view class="answer-body">
+            <view bindtap="bindItemTap">
+              <text class="answer-txt" aid="{{answer_id}}" bindtap="bindQueTap4">大连理工大学外国语学院始建于大连理工大学建校初期，前身为承担全校公共外语教学的俄文教研组；1985年成立外语系，建立英语专业，2001年建立日语专业，获得“外国语言学及应用语言学”二级学科硕士学位授予权；2003年，外语系改建为外国语学院，获英语语言文学二级学科硕士学位授予权；2010年获得外国语言文学一级学科硕士学位授予权，下设外国语言学及应用语言学、英语语言文学和日语语言文学3个二级学科硕士点；2010年获得翻译专业硕士学位（MTI）授予权；2012年建立翻译专业；2013年建立俄语专业。</text>
+            </view>
+          </view>
+
+        </view>
+      </view>     
+
+    
+  </view>
+</scroll-view>
+
+</view>

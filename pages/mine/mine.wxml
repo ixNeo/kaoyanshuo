@@ -26,12 +26,10 @@
 
       <view class='line'></view>
     <view class="nav">
-      <view class="navName">
-      <view>
-       <image src="../../images/write.png" style="width:50rpx;height:50rpx;">
-        </image></view>
+      
+        <view class="imgp"><image src="../../images/signature.png" style="width:50rpx;height:50rpx;"></image></view>
         <view class="navinput"><input placeholder='点击添加个性签名' maxlength='15'></input></view>
-      </view>
+      
     </view>
 
     <view class="hr">
@@ -51,7 +49,7 @@
     
     <view class="item">
       <view class="imgp">
-        <image src="../../images/eye.png" style="width:50rpx;height:50rpx;"></image>
+        <image src="../../images/care.png" style="width:50rpx;height:50rpx;"></image>
       </view>
       <view class="name">(我)关注(的用户)</view>
       <view class="detail">
@@ -78,7 +76,7 @@
       <view class="imgp"  bindtap='jumpto_mypost'>
         <image src="../../images/draft.png" style="width:50rpx;height:50rpx;"></image>
       </view>
-      <view class="name" bindtap='jumpto_mypost'>(我的)问答</view>
+      <view class="name" bindtap='jumpto_mypost'>(我的)发帖</view>
       <view class="detail" bindtap='jumpto_mypost'>
         <text>></text>
       </view>

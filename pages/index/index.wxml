@@ -1,13 +1,12 @@
 <!--index.wxml-->
 <view class="touch" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" ><!--切换页面-->
-<scroll-view scroll-y="true" class="container" bindscrolltoupper="upper" upper-threshold="10" lower-threshold="5" bindscrolltolower="lower"  scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+<scroll-view scroll-y="true" class="container"  >
   <view class="search flex-wrp"><!--搜索框开始-->
       <view class="search-left flex-item">
-          <!--image src="../../images/search.png"></image-->
           <input placeholder="搜索帖子" placeholder-class="search-placeholder" value="{{searchValue}}" auto-focus bindinput="searchValueInput" bindconfirm='start_search_db'/>
       </view>
       <view class="search-right flex-item" bindtap="upper">
-          <image src="../../images/New folder/search.png"></image>
+          <image src="../../images/search.png"></image>
       </view>
   </view><!--搜索框结束-->
 
@@ -24,7 +23,6 @@
                     </view>                    
                     <text>{{item.user_name}}发了帖子</text><!--获取用户--名字-->
                 </a>
-                <!--更多按钮 隐去 <image class="item-more" mode="aspectFit" src="../../images/more.png"></image>-->
             </view><!--用户基本信息版块结束-->
           <view> <!--帖子标签开始-->
           <label class="mylabel" wx:for="{{item.post_tags}}" wx:for-index="idx" wx:for-item="item_tag"><text class="label_text">{{item_tag}}</text> </label>
@@ -41,11 +39,6 @@
                         <view class="comments">
                             <a>{{item.follow_count}} 跟帖 </a><!--加载跟帖数--->
                         </view>
-                        <!--加载跟帖按钮，隐去                        
-                        <view class="follow-it">
-                            <a>关注问题</a>
-                        </view>
-                        --->
                     </view><!--点赞、跟帖数量加载结束-->
                 </view>
             </view><!--帖子摘要、点赞加载结束-->

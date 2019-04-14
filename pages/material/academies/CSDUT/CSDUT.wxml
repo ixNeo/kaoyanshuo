@@ -1,0 +1,48 @@
+<!--answerjisuanji.wxml-->
+<view class="container">
+    <view class="question" >
+        <text class="question-title">大连理工大学软件学院</text>
+    </view>
+ 
+    <view class="answer-content">
+        <text>大连理工大学计算机专业创建于1974年，并于1981年发展成计算机科学与工程系。2009年，成立计算机科学与技术学院。目前，大连理工大学计算机科学与技术学院拥有1个博士后流动站、2个博士点和3个硕士点，其中，计算机应用技术硕士点建于1986年，博士点建于2000年，2002年建成辽宁省重点学科；计算机软件与理论硕士点建于1992年，博士点建于2002年；计算机系统结构硕士点建于2002年。2008年大连理工大学计算机科学与技术建成辽宁省一级重点学科，2009年建成计算机科学与技术博士后流动站。学院由计算机技术研究所、计算机软件与理论研究所、计算机应用技术研究所、计算机系统结构研究所组成。
+
+
+        </text>
+        <image src="../../../../images/jisuanji1.jpg"></image>
+        <text>
+            大连理工大学计算机科学与技术学科现有中国科学院院士（兼）1人，有博士生导师16人，教授19人，副教授22人，具有博士学位的教师41名，具有较强的科研实力。近年来，计算机科学与技术学院取得了可喜成绩，先后获得国家科学技术进步二等奖1项、辽宁省科技进步1等奖1项、省部级二等奖5项、三等奖7项。近三年先后在国内外重要学术期刊、国际学术会议发表论文604篇，其中，被SCI索引146篇，EI索引256篇, ISTP索引72篇。
+
+　　根据《中国大学及学科专业评级报告2008-2009》全国一级学科排名，大连理工大学计算机科学与技术一级学科位于全国前9.25%，在全国227所高校中位列21位，在大连理工大学42个一级学科位列第10位。
+
+　　本学科培养出了数以千计的计算机专业人才，毕业生遍布国内外，桃李满天下。近几年共培养博士学位研究生和学术硕士研究生近900人，专业学位硕士生 1000余人，本科毕业生近3000人，为国家计算机专业人才的培养做出重要贡献。
+
+        </text>
+        <image src="../../../../images/jisuanji2.jpg"></image>
+    </view>
+
+    <view class="answer-footer flex-wrp">
+        <view class="good flex-item">
+            <view class="good-bad">
+                <image src="../../../../images/awsl.png"></image>
+            </view>
+            <view class="good-num">2.1k</view>
+        </view>
+        <view class="operation-wrp flex-item">
+            <view class="operation flex-wrp flex-tab">
+                <button class="operation-btn flex-item" hover-class="operation-btn-hover" plain = 'true' >
+                    <image src="../../../../images/star.png"></image>
+                    <text>收藏</text>
+                </button>
+                <button class="operation-btn flex-item" plain = 'true'  bindtap='goToTalkPage'>
+                    <image src="../../../../images/comment.png"></image>
+                    <text>评论</text>
+                </button>
+            </view>
+        </view>
+
+
+
+    </view>
+</view>
+

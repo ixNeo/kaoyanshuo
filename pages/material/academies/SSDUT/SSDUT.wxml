@@ -1,0 +1,48 @@
+<!--answerruanjian.wxml-->
+<view class="container">
+    <view class="question" bindtap="toQuestion">
+        <text class="question-title">大连理工大学软件学院</text>
+    </view>
+ 
+    <view class="answer-content" bindtap="toQuestion">
+        <text>大连理工大学软件学院成立于2000年，是大连理工大学直属的学院之一，也是国家首批国家示范性软件学院之一。学院坐落在大连理工大学开发区校区，校园环境优美、功能齐全、设备先进、办学条件一流。
+
+学院具有全日制本科生、硕士研究生、博士研究生等培养层次，拥有软件工程一级学科博士点，建有辽宁省省级实验教学示范中心及辽宁省虚拟仿真实验教学示范中心。学院现有全日制本科生2500余人，硕士、博士研究生600余人，软件工程专业于2015年顺利通过全国工程教育专业认证（全国仅2所）。
+        </text>
+        <image src="../../../../images/ruanjian1.jpg"></image>
+        <text>
+          软件工程学科作为大连理工大学 “高水平实力”学科重点建设，并入选辽宁省世界一流大学重点建设学科，在上海软科2017“中国最好学科排名”中，名列全国第8名（前5%），全国第四轮学科评估结果为B+。近五年，累计承担各类国家自然科学基金70余项，主持国家自然科学基金重点项目4项、优秀青年基金1项；国家重点研发计划子课题6项，国防类项目4项等，科研进款连续四年位列大连理工大学信息学科第一名；发表学术论文600余篇，其中ESI高被引论文10余篇，国际公认顶级A类期刊/会议50余篇。于2017年承办由国家自然科学基金委主办的首届“水下机器人目标抓取大赛”，受到国际、国内相关领域广泛关注。
+
+学院现有专任教师102名，其中正高级19人，副高级36人，博士生导师17人。拥有中国工程院院士（兼）2人，国家杰出青年基金获得者1人，优青基金获得者1人，教育部新世纪优秀人才支持计划4人，“中国高被引学者”1人，国家“香江学者”计划1人，50%以上的教师具有海外学术背景。同时学院拥有校聘海外学术大师2人，海天学者21人，企业兼职教师90余人，已形成一支以高端学术带头人为引领、中青年教师为骨干、专兼职相结合的高水平师资队伍。
+
+        </text>
+        <image src="../../../../images/ruanjian2.jpg"></image>
+    </view>
+
+    <view class="answer-footer flex-wrp">
+        <view class="good flex-item">
+            <view class="good-bad">
+                <image  src="../../../../images/awsl.png"></image>
+            </view>
+            <view class="good-num">2.1k</view>
+        </view>
+        <view class="operation-wrp flex-item">
+            <view class="operation flex-wrp flex-tab">
+
+                <button class="operation-btn flex-item" hover-class="operation-btn-hover" plain = 'true' >
+                    <image src="../../../../images/star.png"></image>
+                    <text>收藏</text>
+                </button>
+                <button class="operation-btn flex-item" plain = 'true'  bindtap='goToTalkPage'>
+                    <image src="../../../../images/comment.png"></image>
+                    <text>评论</text>
+                </button>
+
+            </view>
+        </view>
+
+
+
+    </view>
+</view>
+

@@ -1,5 +1,5 @@
 {
-  "cloudfunctionRoot": "./functions/",
+	"cloudfunctionRoot": "functions/",
 	"description": "项目配置文件",
 	"packOptions": {
 		"ignore": []
@@ -15,7 +15,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.6.4",
 	"appid": "wx4baf0487b8c737ff",
-	"projectname": "miniprogram-test-2",
+	"projectname": "kaoyan_finv1",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

@@ -9,7 +9,7 @@ var ret_item;
 // 云函数入口函数
 exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext()
-
+  console.log('begin add_post_like')
   // return {
   //   event,
   //   openid: wxContext.OPENID,

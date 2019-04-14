@@ -1,5 +1,5 @@
 //index.js
-const util = require('../../../utils/util.js')
+
 var app = getApp()
 
 var touchDot = 0;//触摸时的原点 

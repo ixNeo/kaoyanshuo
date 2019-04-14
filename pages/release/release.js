@@ -19,23 +19,26 @@ Page({
   },
 
   onLoad: function (options) {
+    var that = this;
     let type_trans = options.type;
     this.setData({type:type_trans});
     if(type_trans!="new"){
       let item_value = JSON.parse(options.item);
       this.setData({ major_item: item_value });
+      console.log('major-post', that.data.major_item);
     }
-    var that = this;
     //调用应用实例的方法获取全局数据
     // this.getData();
     wx.getUserInfo({
       success(res) {
         const userInfo = res.userInfo
         const nickName = userInfo.nickName
-        that.setData({user_name: nickName});
+        that.setData({ user_name: nickName });
       }
     });
   },
+
+
 
   //跳转到发送
   Next: function (e) {
@@ -167,8 +170,7 @@ Page({
       post_tags: this.data.tag,
       like_count: 0,
       follow_count: 0,
-      follow_posts: [
-      ]
+      follow_posts: []
     };
     var follow_item = {
       // _id: 'todo-identifiant-aleatoire', // 可选自定义 _id，在此处场景下用数据库自动分配的就可以了
@@ -187,9 +189,9 @@ Page({
             title: '上传成功',
           });
           console.log(res);
-          wx.navigateTo({
-            url: '../index/index'
-          });
+          wx.navigateBack({
+            
+          })
         },
         fail(res) {
           console.log(res);
@@ -218,9 +220,8 @@ Page({
             title: '上传成功',
           });
           console.log(res);
-          wx.navigateTo({
-            url: '../index/index'
-          });
+          wx.navigateBack({
+          })
         },
         fail: console.error
       });

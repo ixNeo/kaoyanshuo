@@ -196,9 +196,9 @@ touchStart: function (e) {
     time = 0;
   },
 
-  jumpto_collect: function (e){
+  jumpto_collect: function (e) {
     wx.navigateTo({
-      url: '../mine/collect/collect',
+      url: '../mine/mycollect/mycollect',
     });
   },
 
@@ -206,6 +206,8 @@ touchStart: function (e) {
     wx.navigateTo({
       url: '../mine/mypost/mypost',
     });
-  },
+  }
+
+
 
 })

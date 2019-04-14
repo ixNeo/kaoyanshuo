@@ -1,5 +1,5 @@
 //index.js
-const util = require('../../utils/util.js')
+
 var app = getApp()
 
 var touchDot = 0;//触摸时的原点 
@@ -42,9 +42,9 @@ Page({
         one_post = content_array[i];
         console.log('one_post: ', one_post);
         console.log('one_post-content: ', one_post["post_content"]);
-        if (one_post["post_content"].indexOf(keyword) >= 0
-          || one_post["post_brief"].indexOf(keyword)>=0
-          || one_post["user_name"].indexOf(keyword) >= 0) {
+        if ((one_post["post_content"] && one_post["post_content"].indexOf(keyword) >= 0)
+          || (one_post["post_brief"] && one_post["post_brief"].indexOf(keyword)>=0)
+          || (one_post["user_name"] && one_post["user_name"].indexOf(keyword) >= 0)) {
           search_res_list.push(one_post);
           console.log('list: ', search_res_list);
           continue;

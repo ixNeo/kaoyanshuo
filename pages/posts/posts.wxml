@@ -4,31 +4,37 @@
 <view class="container">
     <view class="question-wrp">
         <view class="question-item">
-            <view class="que-tag" wx:for="{{item.post_tags}}" wx:for-index="idx" wx:for-item="item_tag">
-                <text class="tag">{{item_tag}}</text>
-            </view>
+        
+             <label class="mylabel" wx:for="{{item.post_tags}}" wx:for-index="idx" wx:for-item="item_tag"><text class="label_text">{{item_tag}}</text> </label>
+
             <view class="que-title">
                 {{item.post_brief}}
             </view>
 
-            <view class="que-title">
-                \n{{item.post_content}}
+            <view>
+            <text class="label_text">
+                {{item.post_content}}
+            </text>
             </view>
+            
 
             <view class="que-follow">
                 <view class="left">
                     <view class="watch">
-                        <image src="../../images/eye.png"></image>
+                        <image src="../../images/awsl.png"></image>
                         <text>{{item.like_count}}</text>
                     </view>
                     <view class="comment">
-                        <image src="../../images/comment2.png"></image>
+                        <image src="../../images/comment.png"></image>
                         <text>{{item.follow_count}}</text>
                     </view>
                 </view>
-                <view class="right" bindtap="add_like">
+
+                <!--<view class="right" bindtap="add_like">
                     关注
-                </view>
+                </view>-->
+<view class="right" style="background:{{viewBg}};" bindtap="add_like">关注</view>
+
             </view>
         </view>
         <view class="que-operate flex-wrp">
@@ -38,7 +44,7 @@
             </view>-->
 
             <view class="write flex-item" bindtap="add_follow">
-                <image src="../../images/write.png"></image>
+                <image src="../../images/comment.png"></image>
                 <text>跟帖</text>
             </view>
         </view>

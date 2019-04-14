@@ -1,48 +1,53 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/discovery/discovery",
     "pages/search/search",
+    "pages/material/material",
     "pages/mine/mine",
     "pages/posts/posts",
     "pages/comment/comment",
-    "pages/mine/User/User",
+    "pages/mine/user/user",
     "pages/mine/feedback/feedback",
-    "pages/mine/mypost/mypost",
-    "pages/mine/collect/collect",
-    "pages/answerruanjian/answerruanjian",
-    "pages/answerjisuanji/answerjisuanji",
-    "pages/answerjiangong/answerjiangong",
-    "pages/answerwaiguoyu/answerwaiguoyu"
+    "pages/material/academies/CSDUT/CSDUT",
+    "pages/material/academies/SSDUT/SSDUT",
+    "pages/material/academies/FLDUT/FLDUT",
+    "pages/material/academies/CEDUT/CEDUT",
+    "pages/mine/mycollect/mycollect",
+    "pages/mine/mypost/mypost"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#186414",
     "navigationBarTitleText": "研坛论道",
-    "navigationBarTextStyle":"white",
-    "enablePullDownRefresh":true
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
   },
   "tabBar": {
     "color": "#626567",
-    "selectedColor": "#2A8CE5",
+    "selectedColor": "#0e932e",
     "backgroundColor": "#FBFBFB",
     "borderStyle": "white",
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "论坛",
-      "iconPath": "images/index.png",
-      "selectedIconPath": "images/index_focus.png"
-    }, {
-        "pagePath": "pages/discovery/discovery",
+    "font-weight": "normal",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "论坛",
+        "iconPath": "images/interactive.png",
+        "selectedIconPath": "images/interactive_fill.png"
+      },
+      {
+        "pagePath": "pages/material/material",
         "text": "资源",
-        "iconPath": "images/discovery.png",
-        "selectedIconPath": "images/discovery_focus.png"
-    }, {
-      "pagePath": "pages/mine/mine",
-      "text": "我的",
-      "iconPath": "images/burger.png",
-      "selectedIconPath": "images/burger_focus.png"
-    }]
+        "iconPath": "images/document.png",
+        "selectedIconPath": "images/document_fill.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine_fill.png"
+      }
+    ]
   },
   "networkTimeout": {
     "request": 10000,

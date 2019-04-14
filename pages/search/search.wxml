@@ -25,7 +25,7 @@
                     </view>                    
                     <text>{{item.user_name}}发了帖子</text><!--获取用户--名字-->
                 </a>
-                <!--更多按钮 隐去 <image class="item-more" mode="aspectFit" src="../../images/more.png"></image>-->
+
             </view><!--用户基本信息版块结束-->
           <view> <!--帖子标签开始-->
           <label class="mylabel" wx:for="{{item.post_tags}}" wx:for-index="idx" wx:for-item="item_tag"><text class="label_text">{{item_tag}}</text> </label>
@@ -42,11 +42,7 @@
                         <view class="comments">
                             <a>{{item.follow_count}} 跟帖 </a><!--加载跟帖数--->
                         </view>
-                        <!--加载跟帖按钮，隐去                        
-                        <view class="follow-it">
-                            <a>关注问题</a>
-                        </view>
-                        --->
+
                     </view><!--点赞、跟帖数量加载结束-->
                 </view>
             </view><!--帖子摘要、点赞加载结束-->

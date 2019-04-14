@@ -1,16 +1,18 @@
 //answer.js
-var util = require('../../utils/util.js')
 
 var touchDot = 0;//触摸时的原点 
 var time = 0;// 时间记录，用于滑动时且时间小于1s则执行左右滑动 
 var interval = "";// 记录/清理时间记录 
 
-var app = getApp()
+var app = getApp();
+var num = 0;
 Page({
   data: {
     motto: '研坛论道',
     userInfo: {},
-    item: {}
+    item: {},
+    viewBg: 'green',
+    like_click_num: 0
   },
   //事件处理函数
   onLoad: function (options) {
@@ -25,6 +27,15 @@ Page({
         userInfo:userInfo
       })
     })
+    this.list = [{
+      ///'author': 'xiongcf',
+      //'info': 'just for example praise list item.',
+      //'praise': 0,
+      'hasChange': false
+    }]
+    this.setData({
+      list: this.list
+    });
   },
 
   onShow: function (options) {
@@ -37,7 +48,19 @@ Page({
         that.setData({ item: res.data });
       }
     });
+    if(that.data.like_click_num % 2==0){
+      this.setData({
+        viewBg: 'green'
+      });
+    }else{
+      this.setData({
+        viewBg: 'gray'
+      });
+    }
+
     console.log('onShow');
+    console.log('num: ', num);
+    console.log('data-click-num',that.data.like_click_num);
   },
 
   tapName: function(event){
@@ -75,61 +98,82 @@ Page({
     time = 0;
   },
 
-  // 关注按钮事件
-  add_like: function (event){
+  ////////////////////////////关注按钮事件///////////////////////////////////////////
+  add_like: function (e){
+    ///点赞
+    var that = this;
+    var num = that.data.like_click_num;
+    that.setData({like_click_num:num+1});
+    num = num +1;
+    var result = num / 2;
     var itemc = this.data.item;
     var that = this;
     var db = wx.cloud.database();
-    wx.cloud.callFunction({
-      // 云函数名称
-      name: 'update_post_like',
-      // 传给云函数的参数
-      data: {
-        item_cloud: itemc
-      },
-      success(res) {
-        // console.log('res', res);
-        db.collection('posts').doc(itemc._id).get({
-          success(res) {
-            // res.data 包含该记录的数据
-            console.log('like-res', res);
-            that.setData({ item: res.data });
-          }
-        })
+    if (num % 2 == 0) {
+      //希望添加取消关注的数据库操作///
+      wx.cloud.callFunction({
+        // 云函数名称
+        name: 'rm_post_like',
+        // 传给云函数的参数
+        data: {
+          item_cloud: itemc
+        },
+        success(res) {
+          // console.log('old-rm-like-cnt', itemc.like_count);
+          itemc.like_count = itemc.like_count-1;
+          that.setData({ item: itemc });
+          // console.log('rm-like-cnt', that.data.item.like_count);
+        },
+        fail: console.error
+      });
+      this.setData({
+        viewBg: 'green',
+      })
+    } else {
+    ///////////////////////////////////////////////////////////////////
+      wx.cloud.callFunction({
+        // 云函数名称
+        name: 'update_post_like',
+        // 传给云函数的参数
+        data: {
+          item_cloud: itemc
+        },
+        success(res) {
+          itemc.like_count = itemc.like_count+1;
+          that.setData({ item: itemc});
+          // console.log('res', res);
+        },
+        fail: console.error
+      });
+      // 向数据库添加我点赞过的帖子
+      var posts_agreed = that.data.item;
+      delete posts_agreed._id;
+      delete posts_agreed._openid;
+      wx.getUserInfo({
+        success(res) {
+          const userInfo = res.userInfo
+          const nickName = userInfo.nickName
+          posts_agreed.owner = nickName;
+          db.collection('person').add({
+            // data 字段表示需新增的 JSON 数据
+            data: posts_agreed,
+            success: res => {
+              // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id
+              console.log(res);
+            },
+            fail(res) {
+              console.log(res);
+            }
+          });
+        }
+      });
+    //////////////////////////////////////////////////////////////////////////////////
+      this.setData({
+        viewBg: 'gray'
+      })
+    }
 
-      },
-      fail: console.error
-    });
-    // 向数据库添加我点赞过的帖子
-    var posts_agreed = that.data.item;
-    wx.getUserInfo({
-      success(res) {
-        const userInfo = res.userInfo
-        const nickName = userInfo.nickName
-        const avatarUrl = userInfo.avatarUrl
-        const gender = userInfo.gender // 性别 0：未知、1：男、2：女
-        const province = userInfo.province
-        const city = userInfo.city
-        const country = userInfo.country;
-        delete posts_agreed._id;
-        posts_agreed.owner = nickName;
-        console.log('post-agreed', posts_agreed);
-        db.collection('person').add({
-          // data 字段表示需新增的 JSON 数据
-          data: posts_agreed,
-          success: res => {
-            // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id
-            console.log(res);
-          },
-          fail(res) {
-            console.log(res);
-          }
-        });
-      }
-    });
-    
   },
-
   // 跟帖按钮事件
   add_follow: function (event){
     var itemc = this.data.item;
@@ -164,8 +208,23 @@ Page({
       },
       fail: console.error
     });
-    
   },
+  changeBg() {
+    num++;
+    var result = num / 2;
+    if (num % 2 == 0) {
+      this.setData({
+        viewBg: 'green'
+      })
+    } else {
+      this.setData({
+        viewBg: 'blue'
+      })
+    }
+    console.log(num)
+    console.log(result)
+  }
+
 
 
 })

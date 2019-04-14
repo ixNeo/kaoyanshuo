@@ -9,8 +9,9 @@
 
 .iconfont {
   font-family: "iconfont" !important;
-  font-size: 30px;
-  font-style: normal;
+  font-size: 40px;
+  /*color: rgb(24, 151, 20)D;*/
+  font-style: rgb(24, 151, 20)D;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -19,6 +20,7 @@
     content: "\eb89";
     float: right;
     background-color: #ffffff;
+
     position: fixed;
     bottom: 40px;
     right: 20px;  

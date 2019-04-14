@@ -97,3 +97,29 @@
     line-height: 28rpx;
     color: #5b5b5b;
 }
+
+
+.mylabel {
+    display: inline-block;
+    height: 42rpx;
+    line-height: 36rpx;
+    padding: 3 4rpx;
+    margin: 0 8rpx;
+    border-radius: 10rpx;
+    
+    vertical-align: middle;
+    overflow: hidden;
+    background: rgb(215, 235, 196);
+    color: rgb(144, 148, 144);    
+  }
+.label_text{
+  font-family: PingFangSC;
+  border: 2px;
+  font-size: 25rpx;
+}
+
+
+
+ 
+
+ 

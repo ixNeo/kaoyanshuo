@@ -34,14 +34,14 @@
       </view>
     </view>
     <view class="end">
-    <!--上传图片-->
+    <!-- 上传图片
     <view class="add_img_view">
      <button class="add_img" bindtap='uploadPhoto' style='background:#ffffff'>
      <image class="image" src='../../images/add_img.png'></image>
-     </button></view>
+     </button></view> -->
      <!--发送-->
      <view class='line_sha'></view>
-         <view class='line'></view>
+         <view class='line'></view>         
     <view class="send">
       <button class="send_button"  style=' background-color: rgb(104, 182, 102)' bindtap='insert_post'>
      发送</button>
