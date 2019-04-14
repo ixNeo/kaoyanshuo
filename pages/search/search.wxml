@@ -7,7 +7,7 @@
           <!--image src="../../images/search.png"></image-->
           <input placeholder="搜索帖子" placeholder-class="search-placeholder" value="{{searchValue}}" auto-focus bindinput="searchValueInput" bindconfirm='start_search_db'/>
       </view>
-      <view class="search-right flex-item" bindtap="upper">
+      <view class="search-right flex-item" bindtap="start_search_db">
           <image src="../../images/New folder/search.png"></image>
       </view>
   </view><!--搜索框结束-->

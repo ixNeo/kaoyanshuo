@@ -85,11 +85,12 @@
     <view class="hr">
     </view>
 
-    <view class="item">
+   <view class="item">
       <view class="imgp">
         <image src="../../images/invite.png" style="width:50rpx;height:50rpx;"></image>
       </view>
       <view class="name">邀请好友</view>
+      <button open-type="share" class="name123">123</button>
       <view class="detail">
         <text>></text>
       </view>
